@@ -143,25 +143,25 @@ main :not(.moon) {
 
 @media (min-width: 576px) {
     main :not(.moon) {
-      max-width: 500px;
+      max-width: 540px;
     }
 }
 
 @media (min-width: 768px) {
     main :not(.moon) {
-      max-width: 680px;
+      max-width: 720px;
     }
 }
 
 @media (min-width: 992px) {
     main :not(.moon) {
-      max-width: 930px;
+      max-width: 960px;
     }
 }
 
 @media (min-width: 1200px) {
     main :not(.moon) {
-      max-width: 1040px;
+      max-width: 1140px;
     }
 }
 
