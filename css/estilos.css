@@ -29,7 +29,7 @@ abbr {
 }
 
 h1 {
-    font-size: 3vw;
+    font-size: 6vw;
     font-weight: bold;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -37,29 +37,33 @@ h1 {
 
 h2 {
     font-weight: normal;
-    font-size: 2vw;
+    font-size: 4vw;
     margin-bottom: 20px;
     margin-top: 10px;
 }
 
 iframe {
-    margin-top: 20px;
     width: 90vw;
     border: none;
+    padding-bottom: 10px;
 }
 
 dt {
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 4vw;
     padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 dd {
-    padding-bottom: 40px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 p, main li, dd {
-    font-size: 1vw;
+    font-size: 2vw;
     padding-bottom: 5px;
 }
 
@@ -127,7 +131,7 @@ footer {
 }
 
 .autor {
-    font-size: 1.5vw;
+    font-size: 3vw;
 }
 
 blockquote, .new {
@@ -137,8 +141,20 @@ blockquote, .new {
 main :not(.moon) {
     margin-right: auto;
     margin-left: auto;
-    width: 98%;
+    width: 100%;
     text-align: left;
+}
+
+@media (max-width: 575px) {
+    .moon h1, .moon p, .explor h1, .explor h2, .explor img {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    input[type="checkbox"] {
+        width: 8px;
+        height: 8px;
+    }
 }
 
 @media (min-width: 576px) {
@@ -176,7 +192,7 @@ main :not(.moon) {
 }
 
 header nav {
-    font-size: 1.4vw;
+    font-size: 2.8vw;
 }
 
 @media (min-width: 768px) {
@@ -199,7 +215,7 @@ header nav {
 
 .moon p {
     font-style: italic;
-    font-size: 2.6vw;
+    font-size: 5.2vw;
 }
 
 footer nav ul li {
@@ -208,7 +224,7 @@ footer nav ul li {
     padding-right: 5px;
     padding-top: 35px;
     padding-bottom: 20px;
-    font-size: 1vw;
+    font-size: 2vw;
 }
 
 footer form {
@@ -216,11 +232,11 @@ footer form {
 }
 
 form p:first-of-type {
-    font-size: 1.2vw;
+    font-size: 2.4vw;
 }
 
 .lastp p {
-    font-size: 0.6vw;
+    font-size: 1.2vw;
 }
 
 button {
@@ -264,7 +280,7 @@ img :not(p) {
 }
 
 p img {
-    width: 12%;
+    width: 40%;
     margin-bottom: 8px;
 }
 
@@ -281,8 +297,27 @@ p img {
     margin-right: auto;
 }
 
+.marsmain {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+    .marsmain {
+        flex-direction: row;
+    }
+
+    aside {
+        flex: 1;
+    }
+
+    .textmars {
+        flex: 3;
+    }
+}
+
 header img {
-    width: 12%;
+    width: 40%;
 }
 
 @media (min-width: 768px) {
@@ -365,7 +400,7 @@ aside a {
 
 aside h1 {
     font-weight: normal;
-    font-size: 1vw;
+    font-size: 2vw;
     text-transform: uppercase;
 }
 
@@ -378,47 +413,14 @@ aside ul {
     padding-left: 10px;
 }
 
-.marsmain {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 7fr 1fr;
-}
-
-aside {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.textmars {
-    grid-column: 1;
-    grid-row: 1;  
-}
-
-@media (min-width: 768px) {
-    .marsmain {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        gap: 10px;
-    }
-
-    aside {
-        grid-column: 1;
-        grid-row: 1;
-    }
-    
-    .textmars {
-        grid-column: 2;
-        grid-row: 1;  
-    }
-}
-
 #title1, #title2, #title3, #title4, #title5, #title6, #quote1, #quote2, #quote3, #quote4, #quote5, #quote6 {
     background-color: var(--bg-light-color);
     padding: 10px;
+    display: block;
 }
 
 h2[lang="en"] {
-    font-size: 3vw;
+    font-size: 6vw;
     font-weight: bold;
 }
 
@@ -430,8 +432,7 @@ figure {
     .cienciamain {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 10px;
+        gap: 25px;
     }
 
     #title1 {
@@ -532,6 +533,7 @@ figure {
 .grid10, .grid11, .grid12, .grid13, .grid14, .grid15 {
     background-color: var(--bg-light-color);
     padding-bottom: 10px;
+    display: block;
 }
 
 .grid10 figcaption, .grid11 figcaption, .grid12 figcaption, .grid13 figcaption, .grid14 figcaption, .grid15 figcaption {
@@ -542,8 +544,7 @@ figure {
     .martemain {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 10px;
+        gap: 25px;
     }
 
     .grid10 {
@@ -574,5 +575,85 @@ figure {
     .grid15 {
         grid-column: 2;
         grid-row: 3;
+    }
+}
+
+.fluidvid10, .fluidvid11, .fluidvid12, .fluidvid13, .fluidvid14, .fluidvid15 {
+    position: relative;
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+iframe.vid10, iframe.vid11, iframe.vid12, iframe.vid13, iframe.vid14, iframe.vid15 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.fluidvid10::before, .fluidvid11::before, .fluidvid12::before, .fluidvid13::before, .fluidvid14::before, .fluidvid15::before {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3vw;
+    }
+        
+    h2 {
+        font-size: 2vw;
+    }
+        
+    dt {
+        font-size: 2vw;
+    }
+        
+    p, main li, dd {
+        font-size: 1vw;
+    }
+        
+    .autor {
+        font-size: 1.5vw;
+    }
+        
+    header nav {
+        font-size: 1.4vw;
+    }
+        
+    .moon p {
+        font-size: 3.6vw;
+    }
+        
+    footer nav ul li {
+        font-size: 1vw;
+    }
+        
+    .lastp p {
+        font-size: 0.6vw;
+    }
+        
+    form p:first-of-type {
+        font-size: 1.6vw;
+    }
+        
+    aside h1 {
+        font-size: 1vw;
+    }
+        
+    h2[lang="en"] {
+        font-size: 3vw;
     }
 }
